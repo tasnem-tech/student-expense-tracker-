@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>Student Expense Tracker</h1>
+      <p>Track your daily spending and manage your student budget easily.</p>
+    </section>
+
+    <section class="card">
+      <form id="expense-form">
+        <input type="text" id="expense-name" placeholder="Expense name" required />
+        <input type="number" id="expense-amount" placeholder="Amount (£)" min="0.01" step="0.01" required />
+        <select id="expense-category" required>
+          <option value="">Choose category</option>
+          <option value="Food">Food</option>
+          <option value="Travel">Travel</option>
+          <option value="Study">Study</option>
+          <option value="Bills">Bills</option>
+          <option value="Other">Other</option>
+        </select>
+        <button type="submit">Add Expense</button>
+      </form>
+    </section>
+
+    <section class="summary">
+      <h2>Total Spent: £<span id="total">0.00</span></h2>
+    </section>
+
+    <section class="card">
+      <h2>Expense List</h2>
+      <ul id="expense-list"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
